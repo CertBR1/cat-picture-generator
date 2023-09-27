@@ -1,4 +1,4 @@
-# Cat Image Fetcher
+# Cat Picture Generator
 
 Este é um simples projeto HTML/CSS/JavaScript que busca uma imagem de gato aleatória da API "The Cat API" e exibe-a em uma página web. Além disso, há um botão "Refresh Page" que permite ao usuário buscar uma nova imagem de gato sempre que desejar.
 
