@@ -12,7 +12,7 @@ Certifique-se de ter uma conexão com a internet para que o projeto possa buscar
 
 2. Abra o arquivo `index.html` em seu navegador da web.
 
-3. Você verá uma imagem de gato exibida na página. Clique no botão "Refresh Page" para buscar uma nova imagem de gato.
+3. Você verá uma imagem de gato exibida na página. Clique no botão "Gerar Gatinho" para buscar uma nova imagem de gato.
 
 ## Tecnologias utilizadas
 
