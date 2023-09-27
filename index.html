@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Estilo para centralizar o formulário */
+        body {
+            display: flex;
+            flex-direction: column;
+            /* Adicione um fluxo de coluna para empilhar elementos verticalmente */
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Estilo para o formulário */
+        form {
+            text-align: center;
+        }
+
+        /* Estilo para o botão */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 10px;
+
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            /* Adicione um fluxo de coluna para empilhar elementos verticalmente */
+            align-items: center;
+        }
+
+        div img {
+            max-width: 500px;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn {
+            background-color: lightslategrey;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <script>
+        const getUrl = async () => {
+            let cat = '';
+            await axios.get("https://api.thecatapi.com/v1/images/search").then(response => {
+                const { url } = response.data[0];
+                cat = url;
+                console.log(cat);
+            }).catch(error => {
+                console.log(error);
+            });
+            document.getElementById('imagem').src = cat;
+        }
+        getUrl();
+
+    </script>
+    <div>
+        <img id="imagem"><br>
+        <input type="button" value="Gerar Gatinho" onClick="window.location.reload()" class="btn">
+    </div>
+
+</body>
+
+</html>
